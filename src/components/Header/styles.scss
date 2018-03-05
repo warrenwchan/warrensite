@@ -1,0 +1,33 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.navbar {
+  width: 100%;
+  margin-top: 100px;
+  position: absolute;
+  top: 0;
+}
+
+.navBarContainer {
+  @include max-width-center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLogo {
+  height: 60px;
+  img {
+    height: 100%;
+  }
+}
+
+.navItems {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}

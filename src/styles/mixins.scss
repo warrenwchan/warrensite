@@ -1,0 +1,6 @@
+@import "../styles/variables.scss";
+
+@mixin max-width-center {
+  max-width: $maxwidth;
+  margin: 0 auto;
+}
