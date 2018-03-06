@@ -7,6 +7,8 @@
   // border-bottom: 100px solid white;
   // border-left: 100vw solid transparent;
   // display: flex;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
 }
 
 .overlayText {
@@ -27,5 +29,5 @@
 
 .galleryItem {
   width: 100%;
-  padding-top: 800px;
+  padding-top: 90vh;
 }

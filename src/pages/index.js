@@ -3,7 +3,10 @@ import styles from '../layouts/index.scss'
 import Prismic from 'prismic-javascript'
 import Link from 'gatsby-link'
 
-import Jumbotron from '../components/Jumbotron/index.js'
+import Jumbotron from '../components/Jumbotron'
+import Skillset from '../components/Skillset'
+
+import grid from '../assets/white-Grid.svg'
 
 class IndexPage extends Component {
   state = {
@@ -28,9 +31,9 @@ class IndexPage extends Component {
       console.log(this.state.doc)
       const document = this.state.doc.data;
       return (
-        <div>
+        <div style={{position: `relative`, background: `url(${grid})`}}>
           <Jumbotron/>
-
+          <Skillset/>
         </div>
       )
     }

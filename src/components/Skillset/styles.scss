@@ -1,0 +1,61 @@
+@import "../../styles/mixins.scss";
+
+.skillsContainer {
+  @include max-width-center;
+  height: 700px;
+}
+
+.sliderContainer {
+  margin: 150px 0 75px 0;
+}
+
+.sliderBox {
+  width: 650px;
+  height: 125px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.sliderItem {
+  padding: 0 10%;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  img {
+    height: 65px;
+    margin: 0;
+  }
+}
+
+.sliderItem:last-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.sliderItem:hover {
+  background-color: teal;
+}
+
+.skillDesc {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  h2 {
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: 10px;
+    margin-bottom: 3rem;
+  }
+  p {
+    margin-bottom: 4rem;
+    color: $ashGrey;
+  }
+  a {
+    color: white;
+    padding: 8px 35px;
+    border-radius: 25px;
+    background: $lightGrey;
+  }
+}
