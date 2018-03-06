@@ -24,20 +24,19 @@ class IndexPage extends Component {
   }
 
   render() {
-    if(this.state.doc) {
+    if (this.state.doc) {
+      console.log(this.state.doc)
       const document = this.state.doc.data;
       return (
         <div>
-          <Jumbotron
-            doc={document}
-          />
+          <Jumbotron/>
+
         </div>
       )
-    } else {
-      return (
-        <div class="donut"></div>
-      )
     }
+    return (
+      <div className="donut"></div>
+    )
   }
 }
 

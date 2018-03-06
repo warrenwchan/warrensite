@@ -1,11 +1,11 @@
 @import "../../styles/mixins.scss";
-@import "../../styles/variables.scss";
 
 .navbar {
   width: 100%;
   margin-top: 100px;
   position: absolute;
   top: 0;
+  z-index: 9;
 }
 
 .navBarContainer {
