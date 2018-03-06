@@ -1,0 +1,30 @@
+@import "../../styles/mixins.scss";
+
+.contactBgShape {
+  position: relative;
+  height: 550px;
+  width: 100%;
+  background: $offWhite;
+  -webkit-clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.contact {
+  @include max-width-center;
+  padding-top: 200px;
+}
+
+.contactDesc {
+  @include section-desc;
+}
+
+.contactBgShape2 {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  height: 550px;;
+  width: 100%;
+  background: $cloudGrey;
+  -webkit-clip-path: polygon(0% 0%, 100% 25%, 100% 100%, 0 100%);
+  clip-path: polygon(0% 0%, 100% 25%, 100% 100%, 0 100%);
+}

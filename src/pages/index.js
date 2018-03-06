@@ -5,6 +5,7 @@ import Link from 'gatsby-link'
 
 import Jumbotron from '../components/Jumbotron'
 import Skillset from '../components/Skillset'
+import Contact from '../components/Contact'
 
 import grid from '../assets/white-Grid.svg'
 
@@ -34,6 +35,7 @@ class IndexPage extends Component {
         <div style={{position: `relative`, background: `url(${grid})`}}>
           <Jumbotron/>
           <Skillset/>
+          <Contact/>
         </div>
       )
     }
