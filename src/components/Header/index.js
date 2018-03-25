@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './styles.scss'
 import Link from 'gatsby-link'
+import Navbar from '../NavBar/'
 
 import logo from '../../assets/white-Logo.svg'
 
@@ -12,11 +13,7 @@ const Header = () => (
           <img src={logo} alt="Logo"/>
         </Link>
       </div>
-      <div className="navItems">
-        <Link to="/" >Home</Link>
-        <Link to="/skillsets/">Skill Sets</Link>
-        <Link to="/contact/" >Contact</Link>
-      </div>
+      <Navbar/>
     </div>
   </div>
 )
