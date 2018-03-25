@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/Header'
+import grid from '../assets/white-Grid.svg'
 import './index.scss'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div style={{position: `relative`, background: `url(${grid})`}}>
     <Helmet
       title="Warren's Portfolio"
       meta={[
