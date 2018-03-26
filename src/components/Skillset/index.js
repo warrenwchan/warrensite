@@ -11,7 +11,7 @@ class Skillset extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      skill: null,
+      skill: 'photography',
     }
     this.handleOptionClick = this.handleOptionClick.bind(this);
   }
@@ -55,13 +55,13 @@ class Skillset extends Component {
         <div className="sliderContainer">
           <div className="sliderBox">
             <div className="sliderItem" id="photography" onClick={() => (this.handleOptionClick("photography"))}>
-              <img src={photoicon}/>
+              <img className={this.state.skill === "photography" ? "isActive" : null} src={photoicon}/>
             </div>
             <div className="sliderItem" id="dev" onClick={() => (this.handleOptionClick("dev"))}>
-              <img src={keyicon}/>
+              <img className={this.state.skill === "dev" ? "isActive" : null} src={keyicon}/>
             </div>
             <div className="sliderItem" id="design" onClick={() => (this.handleOptionClick("design"))}>
-              <img src={penicon}/>
+              <img className={this.state.skill === "design" ? "isActive" : null} src={penicon}/>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './styles.scss'
+import Link from 'gatsby-link'
 
 const Contact = () => {
   return (
@@ -9,7 +10,7 @@ const Contact = () => {
           <div className="contactDesc">
             <h2>Lets Talk Business.</h2>
             <p>Interested in working together? Give me a heads up.</p>
-            <a href="/404/">Contact</a>
+            <Link to="/contact/">Contact</Link>
           </div>
         </div>
       </div>
