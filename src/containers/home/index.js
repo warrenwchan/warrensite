@@ -37,11 +37,9 @@ class Home extends Component {
               <h2>WARREN CHAN</h2>
             </div>
             <div className="jumbotron">
-
               <Jumbotron
                 doc={document}
               />
-
             </div>
           </div>
           <Skillset/>
