@@ -1,12 +1,12 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import styles from '../layouts/index.scss'
 
-const SecondPage = () => (
+import Design from '../containers/Design/'
+
+const DesignPage = () => (
   <div>
-    <h1>Design</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <Design/>
   </div>
 )
 
-export default SecondPage
+export default DesignPage

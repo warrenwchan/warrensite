@@ -1,12 +1,12 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const SecondPage = () => (
+import DevPage from '../containers/Dev/'
+
+const Dev = () => (
   <div>
-    <h1>Dev</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
+    <DevPage/>
   </div>
 )
 
-export default SecondPage
+export default Dev

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styles from './styles.scss'
-import Link from 'gatsby-link'
 import Prismic from 'prismic-javascript'
 import scrollToElement from 'scroll-to-element'
 
