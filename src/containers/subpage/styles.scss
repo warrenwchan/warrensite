@@ -2,20 +2,28 @@
 
 .banner {
   width: 100%;
-  height: 55vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include Desktop {
+    height: 55vh;
+  }
 }
 
 .bannerTitle {
   text-align: center;
   color: white;
   h2 {
-    font-size: 4rem;
+    font-size: 2rem;
     font-family: Roboto Condensed;
     text-transform: uppercase;
     letter-spacing: 8px;
+  }
+  @include Desktop {
+    h2 {
+      font-size: 4rem;
+    }
   }
   @include round-button
 }

@@ -1,36 +1,14 @@
 import React, { Component } from 'react'
 import styles from './styles.scss'
 import Link from 'gatsby-link'
-import Slider from 'react-slick'
 import Prismic from 'prismic-javascript'
 import scrollToElement from 'scroll-to-element'
 
 import SubPage from '../subpage/'
 import PhotoContainer from '../../components/PhotoContainer/'
+import PhotoSlider from '../../components/PhotoSlider/'
 import Loader from '../../components/Loader'
 import photo from '../../assets/photos/_MG_9081.jpg'
-
-function NextArrow(props) {
-  const {className, style, onClick} = props
-  return (
-    <div
-      className={className}
-      style={{...style, display: 'block', width: '10%', height: '100%', zIndex: '9', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-      onClick={onClick}
-    ></div>
-  );
-}
-
-function PrevArrow(props) {
-  const {className, style, onClick} = props
-  return (
-    <div
-      className={className}
-      style={{...style, display: 'block', width: '10%', height: '100%', zIndex: '9', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-      onClick={onClick}
-    ></div>
-  );
-}
 
 class Photography extends Component {
   constructor(props) {
@@ -62,15 +40,6 @@ class Photography extends Component {
   }
 
   render() {
-    let settings = {
-      infinite: true,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      dots: true,
-      initialSlide: 0,
-      nextArrow: <NextArrow className="nextButton"></NextArrow>,
-      prevArrow: <PrevArrow className="prevButton"></PrevArrow>
-    };
 
     if (this.state.doc) {
       const document = this.state.doc.data;
@@ -81,32 +50,10 @@ class Photography extends Component {
             title={document.page_title[0].text}
             photo={document.body[0].items[1].image.url}
           >
-
-            <section className="imageSlider">
-              <div className="sliderTitle">
-                <h2>Album Collections</h2>
-              </div>
-              <div id="slider">
-                <Slider {...settings} className="photographySlider">
-                  {document.body[this.state.album].items.map((photo, i) => {
-                    return (
-                      <div key={i}>
-                        <PhotoContainer
-                          class="sliderImg"
-                          photo={photo.image.url}
-                        >
-                          <div className="sliderImgInfo">
-                            <h2>{photo.image_title[0].text}</h2>
-                            <p>{photo.image_description[0].text}</p>
-                          </div>
-                        </PhotoContainer>
-                      </div>
-                    )
-                  })}
-                </Slider>
-              </div>
-            </section>
-
+            <PhotoSlider
+              data={document}
+              album={this.state.album}
+            />
             <section className="photoGrid">
               {document.body.map((album, i) => {
                 return (
