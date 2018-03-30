@@ -7,8 +7,12 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import logo from '../../assets/white-Logo.svg'
 
 class Header extends Component {
-  state= {
-    menuToggle: false,
+  constructor(props) {
+    super(props)
+    this.state= {
+      menuToggle: false,
+    }
+    this.menuToggle = this.menuToggle.bind(this)
   }
 
   menuToggle() {
@@ -25,7 +29,7 @@ class Header extends Component {
             <Link to="/">
               <img src={logo} alt="Logo"/>
             </Link>
-            <a className='menuToggle' onClick={() => {this.menuToggle()}} >
+            <a className='menuToggle' onClick={() => (this.menuToggle())} >
               {this.state.menuToggle === true ?
                 <FontAwesomeIcon icon="times" size="2x"/>
               :
@@ -35,6 +39,7 @@ class Header extends Component {
           </div>
           <MenuItems
             toggle={this.state.menuToggle}
+            onClickToggle={this.menuToggle}
           />
         </div>
       </div>
