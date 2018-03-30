@@ -2,22 +2,43 @@
 
 .navbar {
   width: 100%;
-  margin-top: 100px;
+  margin-top: 25px;
   position: absolute;
   top: 0;
   z-index: 9;
+  @include Desktop {
+    margin-top: 100px;
+  }
 }
 
 .navBarContainer {
   @include max-width-center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
+  @include Desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .navLogo {
   height: 60px;
+  display: flex;
+  justify-content: space-between;
   img {
     height: 100%;
+    margin: 0;
+  }
+  @include Desktop {
+    display: block;
+  }
+}
+
+.menuToggle {
+  display: flex;
+  align-items: center;
+  color: white;
+  @include Desktop {
+    display: none;
   }
 }

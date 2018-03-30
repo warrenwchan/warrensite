@@ -1,30 +1,49 @@
 @import "../../styles/mixins.scss";
 
-.contactBgShape {
+.contactContainer {
   position: relative;
-  height: 550px;
-  width: 100%;
+  height: 350px;
+  margin-top: 25%;
+  display: flex;
+  align-items: center;
   background: $offWhite;
-  -webkit-clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%);
-  clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-.contact {
-  @include max-width-center;
-  padding-top: 200px;
+  @include Desktop {
+    margin-top: 150px;
+  }
 }
 
 .contactDesc {
   @include section-desc;
 }
 
-.contactBgShape2 {
-  position: absolute;
-  bottom: 0;
-  z-index: -1;
-  height: 550px;;
+.contactBgShape {
+  height: 35%;
   width: 100%;
+  position: absolute;
+  bottom: 350px;
+  z-index: 1;
+  background: $offWhite;
+  -webkit-clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 100%, 100% 0%, 100% 100%, 0% 100%);
+  @include Desktop {
+    height: 150px
+  }
+}
+
+.contact {
+  @include max-width-center;
+}
+
+.contactBgShape2 {
+  height: 25%;
+  width: 100%;
+  position: absolute;
+  bottom: 350px;
+  z-index: -1;
   background: $cloudGrey;
-  -webkit-clip-path: polygon(0% 0%, 100% 25%, 100% 100%, 0 100%);
-  clip-path: polygon(0% 0%, 100% 25%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 100%, 100% 100%, 0 100%);
+  clip-path: polygon(0% 0%, 100% 100%, 100% 100%, 0 100%);
+  @include Desktop {
+    height: 100px
+  }
 }

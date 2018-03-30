@@ -2,15 +2,18 @@
 
 .skillsContainer {
   @include max-width-center;
-  height: 580px;
+  padding: 15% 0;
+  @include Desktop {
+    padding: 10% 0;
+  }
 }
 
 .sliderContainer {
-  margin: 150px 0 75px 0;
+  margin-bottom: 75px;
 }
 
 .sliderBox {
-  width: 650px;
+  max-width: 650px;
   height: 125px;
   margin: 0 auto;
   border-radius: 10px;
@@ -18,7 +21,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  @include Desktop {
+    width: 100%;
+  }
 }
 
 .sliderItem {
@@ -51,4 +56,5 @@
 .skillDesc {
   @include section-desc;
   max-width: 700px;
+
 }

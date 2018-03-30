@@ -26,7 +26,7 @@ class Skillset extends Component {
       if (this.state.skill === "dev") {
         return (
           <div className="skillDesc">
-            <h2>I Am a Web Developer</h2>
+            <h2>A Web Developer</h2>
             <p>Front-end web developer working with you to build your personalized website. </p>
             <Link to="/dev/">Take a look</Link>
           </div>
@@ -34,7 +34,7 @@ class Skillset extends Component {
       } else if (this.state.skill === "design") {
         return (
           <div className="skillDesc">
-            <h2>I Am a Designer</h2>
+            <h2>A Graphic Design</h2>
             <p>Creating with pen, paper, photoshop and illustrator</p>
             <Link to="/design/">Take a look</Link>
           </div>
@@ -42,7 +42,7 @@ class Skillset extends Component {
       } else {
         return (
           <div className="skillDesc">
-            <h2>I Am a Photographer</h2>
+            <h2>A Photographer</h2>
             <p>Lets take some portraits, lanscape headshots or product shots. You name it.</p>
             <Link to="/photography/">Take a look</Link>
           </div>

@@ -1,8 +1,17 @@
 @import "../styles/variables.scss";
 
+@mixin Desktop {
+  @media (min-width: $desktop-size) {
+    @content;
+  }
+}
+
 @mixin max-width-center {
+  margin: 0 5%;
   max-width: $maxwidth;
-  margin: 0 15%;
+  @include Desktop {
+    margin: 0 15%;
+  }
 }
 
 @mixin section-desc {
@@ -10,10 +19,14 @@
   margin: 0 auto;
   text-align: center;
   h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 200;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     margin-bottom: 2rem;
+    @include Desktop {
+      font-size: 3rem;
+      letter-spacing: 10px;
+    }
   }
   p {
     margin-bottom: 4rem;
@@ -31,6 +44,6 @@
     background: $lightGrey;
   }
   a:hover {
-    color: orange;
+    color: $primary;
   }
 }

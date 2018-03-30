@@ -5,17 +5,13 @@ import Link from 'gatsby-link'
 const Contact = () => {
   return (
     <div className="contactContainer">
-      <div className="contactBgShape">
-        <div className="contact">
-          <div className="contactDesc">
-            <h2>Lets Talk Business.</h2>
-            <p>Interested in working together? Give me a heads up.</p>
-            <Link to="/contact/">Contact</Link>
-          </div>
-        </div>
+      <div className="contactDesc">
+        <h2>Lets Talk Business.</h2>
+        <p>Interested in working together? Let me know!</p>
+        <Link to="/contact/">Contact</Link>
       </div>
-      <div className="contactBgShape2">
-      </div>
+      <div className="contactBgShape"></div>
+      <div className="contactBgShape2"></div>
     </div>
   )
 }
