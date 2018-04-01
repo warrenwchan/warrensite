@@ -18,12 +18,15 @@
   }
 
   .projectDesc {
+    width: 90%;
     margin: 0 50px;
     @include round-button;
     h3 {
-      color: $darkGrey;
+      color: $lightGrey;
       font-size: 1.2rem;
       font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1.5;
     }
   }
 
@@ -31,6 +34,7 @@
     width: 500px;
     height: 100%;
     background-color: grey;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18)
   }
   .projectCardImage:after {
     content: "";

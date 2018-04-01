@@ -42,7 +42,6 @@ class Photography extends Component {
 
     if (this.state.doc) {
       const document = this.state.doc.data;
-      console.log(document)
       return (
         <div>
           <SubPage
