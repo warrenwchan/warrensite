@@ -1,0 +1,43 @@
+@import '../../styles/mixins';
+
+.projectCard {
+  display: flex;
+  padding: 100px 0;
+  border-bottom: 1px solid $cloudGrey;
+
+  .icon {
+    width: 120px;
+    height: 100%;
+    background-color: grey;
+    transform: rotateZ(15deg)
+  }
+  .icon:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .projectDesc {
+    margin: 0 50px;
+    @include round-button;
+    h3 {
+      color: $darkGrey;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+  }
+
+  .projectCardImage {
+    width: 500px;
+    height: 100%;
+    background-color: grey;
+  }
+  .projectCardImage:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+.projectCard:last-child {
+  border: none;
+}

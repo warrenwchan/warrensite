@@ -1,0 +1,6 @@
+@import '../../styles/mixins';
+
+.projectCardContainer {
+  @include max-width-center;
+  padding: 100px 0;
+}
