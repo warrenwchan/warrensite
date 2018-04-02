@@ -32,9 +32,8 @@ class DevPage extends Component {
   }
 
   render() {
-    if(this.state.doc) {
+    if (this.state.doc) {
       const dev = this.state.doc.data;
-      console.log(dev)
       return(
         <div>
           <SubPage

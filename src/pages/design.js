@@ -3,22 +3,11 @@ import styles from '../layouts/index.scss'
 
 import Design from '../containers/Design/'
 
-const DesignPage = ({ data }) => (
+const DesignPage = () => (
   <div>
-    <Design
-      data={data}
-    />
+    <Design/>
   </div>
 )
 
 export default DesignPage
 
-export const query = graphql`
-  query DesignQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
