@@ -38,7 +38,7 @@ class DevPage extends Component {
       return(
         <div>
           <SubPage
-            title={dev.page_title[0].text}
+            title={dev.title[0].text}
             photo={dev.banner.url}
           >
             <section className="projectCardContainer">

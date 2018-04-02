@@ -45,7 +45,7 @@ class Photography extends Component {
       return (
         <div>
           <SubPage
-            title={document.page_title[0].text}
+            title={document.title[0].text}
             photo={document.body[0].items[1].image.url}
           >
             <PhotoSlider
