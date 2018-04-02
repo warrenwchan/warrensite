@@ -12,7 +12,7 @@ class MenuItems extends Component {
         <div className="dropdown">
           <a className="dropbtn">Work <FontAwesomeIcon icon="caret-down"/></a>
           <div className="dropdown-content">
-            <Link to="/photography/" onClick={this.props.onClickToggle}><FontAwesomeIcon icon="caret-right"/> Photograpghy</Link>
+            <Link to="/photography/" onClick={this.props.onClickToggle}><FontAwesomeIcon icon="caret-right"/> Photography</Link>
             <Link to="/design/" onClick={this.props.onClickToggle}><FontAwesomeIcon icon="caret-right"/> Design</Link>
             <Link to="/dev/" onClick={this.props.onClickToggle}><FontAwesomeIcon icon="caret-right"/> Developer</Link>
           </div>
