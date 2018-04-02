@@ -27,9 +27,12 @@
   }
   a { /* Links inside the navbar */
     margin: 25px 0;
-    color: white;
-    font-size: 16px;
+    color: $offWhite;
+    font-size: 0.8rem;
     text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     @include Desktop {
       text-align: center;
       float: left;
@@ -53,10 +56,10 @@
 /* Dropdown button */
 .dropdown .dropbtn {
   margin: 25px 0;
-  font-size: 16px;
+  font-size: 0.8rem;
   border: none;
   outline: none;
-  color: white;
+  color: $offWhite;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
 }

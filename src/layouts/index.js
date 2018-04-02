@@ -20,7 +20,7 @@ import faCode from '@fortawesome/fontawesome-free-solid/faCode'
 fontawesome.library.add(faTimes, faBars, faCaretDown, faCaretRight, faPencilAlt, faCamera, faCode)
 
 const TemplateWrapper = ({ children }) => (
-  <div style={{position: `relative`, background: `url(${grid})`, overflow: 'hidden', backgroundAttachment: 'fixed'}}>
+  <div className="templateWrapper" style={{position: `relative`, background: `url(${grid})`, backgroundAttachment: `fixed`}}>
     <Helmet
       title="Warren's Portfolio"
       meta={[

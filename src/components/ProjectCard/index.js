@@ -10,6 +10,7 @@ const ProjectCard = (props) => {
           <h2>{props.title}</h2>
           <h3>{props.desc}</h3>
           <p>{props.blurb}</p>
+          <p className="tech">Tech: {props.tech}</p>
           <a href={props.url}>Take a Look <FontAwesomeIcon icon="caret-right"/></a>
         </div>
       <div className="projectCardImage" style={{ background: `url(${props.image}) center / cover` }}></div>

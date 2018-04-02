@@ -5,7 +5,7 @@ import Prismic from 'prismic-javascript'
 
 import SubPage from '../subpage/'
 import ProjectCard from '../../components/ProjectCard/'
-import Loader from '../../components/Loader'
+import Loader from '../../components/Loader/'
 
 class DevPage extends Component {
   constructor(props) {
@@ -24,6 +24,8 @@ class DevPage extends Component {
       ).then(response => {
         if (response) {
           this.setState({ doc: response.results[0] });
+        } else {
+          console.log('nothing')
         }
       });
     });
@@ -47,6 +49,7 @@ class DevPage extends Component {
                     title={project.primary.title[0].text}
                     desc={project.primary.description[0].text}
                     blurb={project.primary.blurb[0].text}
+                    tech={project.primary.tech[0].text}
                     url={project.primary.url.url}
                     icon={project.primary.icon.url}
                     image={project.primary.image.url}
@@ -57,10 +60,11 @@ class DevPage extends Component {
           </SubPage>
         </div>
       )
+    } else {
+      return (
+        <Loader/>
+      )
     }
-    return (
-      <Loader />
-    )
   }
 }
 
