@@ -17,7 +17,7 @@ class MenuItems extends Component {
             <Link to="/dev/" onClick={this.props.onClickToggle}><FontAwesomeIcon icon="caret-right"/> Developer</Link>
           </div>
         </div>
-        <Link to="/soon/" onClick={this.props.onClickToggle}>Contact</Link>
+        <Link to="/contact/" onClick={this.props.onClickToggle}>Contact</Link>
       </div>
     )
   }

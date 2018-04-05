@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 
 import Jumbotron from '../../components/Jumbotron'
 import Skillset from '../../components/Skillset'
-import Contact from '../../components/Contact'
+import ContactSection from '../../components/ContactSection'
 import Loader from '../../components/Loader'
 
 class Home extends Component {
@@ -43,7 +43,7 @@ class Home extends Component {
             </div>
           </div>
           <Skillset/>
-          <Contact/>
+          <ContactSection/>
         </div>
       )
     }

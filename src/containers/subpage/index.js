@@ -10,7 +10,7 @@ class SubPage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="subPageContainer">
         <PhotoContainer class="banner" photo={this.props.photo} >
           <div className="bannerTitle">
             <h2>{this.props.title}</h2>

@@ -1,0 +1,53 @@
+@import '../../styles/mixins';
+
+.ContactContainer, .contactLinkContainer {
+  padding-top: 50px;
+  max-width: 40%;
+  margin: 0 auto;
+  .inputFields {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px auto;
+    input {
+      width: 48%;
+    }
+  }
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+  }
+  .inputRadio {
+    margin: 25px 0;
+    span {
+      margin-right: 25px;
+      label {
+        margin: 0 5px;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.submitButton {
+  @include round-button;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: center;
+  p {
+    margin: 0;
+  }
+}
+
+.contactLink {
+  width: 125px;
+  text-align: center;
+  margin: 0 25px;
+  color: $primary;
+  text-decoration: none;
+}

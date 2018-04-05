@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './styles.scss'
 import Link from 'gatsby-link'
 
-const Contact = () => {
+const ContactSection = () => {
   return (
     <div className="contactContainer">
       <div className="contactDesc">
@@ -16,4 +16,4 @@ const Contact = () => {
   )
 }
 
-export default Contact;
+export default ContactSection;

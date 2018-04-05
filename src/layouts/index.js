@@ -7,6 +7,7 @@ import grid from '../assets/white-Grid.svg'
 import './index.scss'
 
 import fontawesome from '@fortawesome/fontawesome'
+import brands, { faGit } from '@fortawesome/fontawesome-free-brands'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes'
 import faBars from '@fortawesome/fontawesome-free-solid/faBars'
@@ -15,9 +16,12 @@ import faCaretRight from '@fortawesome/fontawesome-free-solid/faCaretRight'
 import faPencilAlt from '@fortawesome/fontawesome-free-solid/faPencilAlt'
 import faCamera from '@fortawesome/fontawesome-free-solid/faCamera'
 import faCode from '@fortawesome/fontawesome-free-solid/faCode'
+import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
+import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
+import faLinkedIn from '@fortawesome/fontawesome-free-brands/faLinkedIn'
 
 
-fontawesome.library.add(faTimes, faBars, faCaretDown, faCaretRight, faPencilAlt, faCamera, faCode)
+fontawesome.library.add(faTimes, faBars, faCaretDown, faCaretRight, faPencilAlt, faCamera, faCode, faInstagram, faGithub, faLinkedIn)
 
 const TemplateWrapper = ({ children }) => (
   <div className="templateWrapper" style={{position: `relative`, background: `url(${grid})`, backgroundAttachment: `fixed`}}>
