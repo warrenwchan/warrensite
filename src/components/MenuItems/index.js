@@ -8,7 +8,7 @@ class MenuItems extends Component {
   render() {
     return (
       <div className={(this.props.toggle === true ? 'menuItems' : 'menuItems menuItemsHide')}>
-        <Link to="/home/" onClick={this.props.onClickToggle}>Home</Link>
+        <Link to="/" onClick={this.props.onClickToggle}>Home</Link>
         <div className="dropdown">
           <a className="dropbtn">Work <FontAwesomeIcon icon="caret-down"/></a>
           <div className="dropdown-content">
