@@ -18,10 +18,9 @@ import faCamera from '@fortawesome/fontawesome-free-solid/faCamera'
 import faCode from '@fortawesome/fontawesome-free-solid/faCode'
 import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
 import faGithub from '@fortawesome/fontawesome-free-brands/faGithub'
-import faLinkedIn from '@fortawesome/fontawesome-free-brands/faLinkedIn'
 
 
-fontawesome.library.add(faTimes, faBars, faCaretDown, faCaretRight, faPencilAlt, faCamera, faCode, faInstagram, faGithub, faLinkedIn)
+fontawesome.library.add(faTimes, faBars, faCaretDown, faCaretRight, faPencilAlt, faCamera, faCode, faInstagram, faGithub)
 
 const TemplateWrapper = ({ children }) => (
   <div className="templateWrapper" style={{position: `relative`, background: `url(${grid})`, backgroundAttachment: `fixed`}}>

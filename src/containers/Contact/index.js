@@ -31,7 +31,6 @@ class Contact extends Component {
   render() {
     if (this.state.doc) {
       const contact = this.state.doc.data;
-      console.log(contact)
       return (
         <div>
           <SubPage
