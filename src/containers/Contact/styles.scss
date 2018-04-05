@@ -2,14 +2,25 @@
 
 .ContactContainer, .contactLinkContainer {
   padding-top: 50px;
-  max-width: 40%;
+  max-width: 90%;
   margin: 0 auto;
+  text-align: center;
+  @include Desktop {
+    max-width: 40%;
+  }
   .inputFields {
-    display: flex;
+    display: block;
     justify-content: space-between;
     margin: 25px auto;
+    @include Desktop {
+      display: flex;
+    }
     input {
-      width: 48%;
+      width: 100%;
+      margin: 20px 0;
+      @include Desktop {
+        width: 48%;
+      }
     }
   }
   textarea {
@@ -38,16 +49,20 @@
 
 .contactLinks {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  @include Desktop {
+    justify-content: center;
+    flex-wrap: inherit;
+  }
   p {
     margin: 0;
   }
 }
 
 .contactLink {
-  width: 125px;
+  width: 50%;
   text-align: center;
-  margin: 0 25px;
+  margin: 15px 0;
   color: $primary;
   text-decoration: none;
 }
