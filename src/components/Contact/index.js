@@ -6,8 +6,8 @@ const Contact = () => {
   return (
     <div className="contactContainer">
       <div className="contactDesc">
-        <h2>Lets Talk Business.</h2>
-        <p>Interested in working together? Let me know!</p>
+        <h2>Lets Team Up!</h2>
+        <p>Lets See What We Can Create Together!</p>
         <Link to="/contact/">Contact</Link>
       </div>
       <div className="contactBgShape"></div>
