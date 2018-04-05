@@ -17,7 +17,7 @@ const Soon = () => {
         <h2 style={{ color: `white`, fontSize: `2rem`, }}>
           🚧 Sorry Coming Soon 🚧
         </h2>
-        <Link to="/" style={{ textDecoration: `none`,}}>
+        <Link to="/home/" style={{ textDecoration: `none`,}}>
           Back Home
         </Link>
       </div>

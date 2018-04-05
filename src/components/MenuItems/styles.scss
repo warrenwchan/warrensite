@@ -30,14 +30,22 @@
     color: $offWhite;
     font-size: 0.8rem;
     text-decoration: none;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, .2);
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    border-bottom: 1.5px solid transparent;
     @include Desktop {
       text-align: center;
       float: left;
     }
   }
+  a:hover {
+    border-bottom: 1.5px solid $primary;
+  }
+}
+
+.activeNav {
+  color: $primary;
+  border-bottom: 1.5px solid $primary;
 }
 
 .menuItemsHide {
@@ -67,7 +75,6 @@
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
   margin: 25px 0;
-  text-shadow: 1px 1px 2px black;
   @include Desktop {
     color: $primary;
   }
