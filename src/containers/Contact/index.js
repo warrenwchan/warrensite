@@ -54,6 +54,7 @@ class Contact extends Component {
                   <textarea name="message" placeholder="What can I do for you?"></textarea>
                 </div>
                 <div className="inputRadio">
+                  <h3>How would you like me to contact you?</h3>
                   <span>
                     <input type="radio" id="contactChoice1" name="contact" value="email"/>
                     <label htmlFor="contactChoice1">Email</label>
