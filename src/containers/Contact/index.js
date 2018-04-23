@@ -40,22 +40,7 @@ class Contact extends Component {
             <section className="ContactContainer">
               <h2>Hey look, a form!</h2>
               <p>Any work realated question or business ideas can be communicated with me through this handy form.</p>
-
-              <form name="contact" method="POST" netlify>
-                <p>
-                  <label>Your Name: <input type="text" name="name"/></label>
-                </p>
-                <p>
-                  <label>Your Email: <input type="email" name="email"/></label>
-                </p>
-                <p>
-                  <label>Message: <textarea name="message"></textarea></label>
-                </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-              </form>
-              {/* <form name="contact" method="POST" action="/pages/thank-you" data-netlify="true">
+              <form name="contact" method="POST" action="/pages/thank-you" data-netlify="true">
                 <input type="hidden" name="contact" value="contact" />
                 <div className="inputFields">
                   <input type="text" name="name" placeholder="Whats your first name?"/>
@@ -84,8 +69,7 @@ class Contact extends Component {
                   </span>
                 </div>
                 <button className="submitButton" type="submit">Send</button>
-              </form> */}
-
+              </form>
             </section>
             <section className="contactLinkContainer">
               <h2>Other ways to reach me</h2>
