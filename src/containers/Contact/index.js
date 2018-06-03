@@ -13,12 +13,10 @@ class Contact extends Component {
       doc: null,
       name: "",
       lastname: "",
-      address: "",
-      number: "",
-      message: "",
       email: "",
       phone: "",
-      text: "",
+      message: "",
+      contact: "",
     }
   }
 
@@ -52,13 +50,13 @@ class Contact extends Component {
 
   render() {
     if (this.state.doc) {
-      const contact = this.state.doc.data;
-      const { name, lastname, address, number, message, email, phone, text } = this.state;
+      const contactData = this.state.doc.data;
+      const { name, lastname, email, phone, message, contact} = this.state;
       return (
         <div>
           <SubPage
-            title={contact.title[0].text}
-            photo={contact.banner.url}
+            title={contactData.title[0].text}
+            photo={contactData.banner.url}
           >
             <section className="ContactContainer">
               <h2>Hey look, a form!</h2>
@@ -69,8 +67,8 @@ class Contact extends Component {
                   <input type="text" name="name" placeholder="Your last name?" value={lastname} onChange={this.handleChange}/>
                 </div>
                 <div className="inputFields">
-                  <input type="email" name="email" placeholder="Your email?" value={address} onChange={this.handleChange}/>
-                  <input type="tel" name="phone" placeholder="Lastly your phone number" value={number} onChange={this.handleChange}/>
+                  <input type="email" name="email" placeholder="Your email?" value={email} onChange={this.handleChange}/>
+                  <input type="tel" name="phone" placeholder="Lastly your phone number" value={phone} onChange={this.handleChange}/>
                 </div>
                 <div>
                   <textarea name="message" placeholder="What can I do for you?" value={message} onChange={this.handleChange}></textarea>
@@ -96,7 +94,7 @@ class Contact extends Component {
             <section className="contactLinkContainer">
               <h2>Other ways to reach me</h2>
               <div className="contactLinks">
-                {contact.body.map(( social, i ) => {
+                {contactData.body.map(( social, i ) => {
                   return(
                     <a key={i} href={social.primary.link.url} className="contactLink">
                       <FontAwesomeIcon icon={["fab", `${social.primary.platforms}`]} size="2x"/>
