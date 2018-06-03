@@ -43,7 +43,7 @@ class Home extends Component {
             </div>
           </div>
           <Skillset/>
-          <form name="contact" method="POST" netlify>
+          <form name="contact" method="POST" data-netlify="true">
                 <div className="inputFields">
                   <input type="text" name="name" placeholder="Whats your first name?"/>
                   <input type="text" name="name" placeholder="Your last name?"/>
