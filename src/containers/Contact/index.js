@@ -41,7 +41,6 @@ class Contact extends Component {
               <h2>Hey look, a form!</h2>
               <p>Any work realated question or business ideas can be communicated with me through this handy form.</p>
               <form name="contact" method="post" action="/thank-you" data-netlify="true" data-netlify-honeypot="bot-field">
-                <input type="hidden" name="contact" value="contact" />
                 <div className="inputFields">
                   <input type="text" name="name" placeholder="Whats your first name?"/>
                   <input type="text" name="name" placeholder="Your last name?"/>
