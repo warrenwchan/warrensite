@@ -31,6 +31,16 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name"/>
+      <input type="text" name="lastname"/>
+      <input type="email" name="email"/>
+      <input type="tel" name="phone"/>
+      <textarea name="message"></textarea>
+      <input type="radio" id="contactChoice1" name="contact" value="email"/>
+      <input type="radio" id="contactChoice2" name="contact" value="phone"/>
+      <input type="radio" id="contactChoice3" name="contact" value="text"/>
+    </form>
     <Header />
     {children()}
   </div>
