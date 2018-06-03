@@ -62,6 +62,7 @@ class Contact extends Component {
               <h2>Hey look, a form!</h2>
               <p>Any work realated question or business ideas can be communicated with me through this handy form.</p>
               <form onSubmit={this.handleSubmit}>
+              <input type="hidden" name="form-name" value="contact" />
                 <div className="inputFields">
                   <input type="text" name="name" placeholder="Whats your first name?" value={name} onChange={this.handleChange}/>
                   <input type="text" name="lastname" placeholder="Your last name?" value={lastname} onChange={this.handleChange}/>
