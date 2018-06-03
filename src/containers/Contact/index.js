@@ -11,6 +11,14 @@ class Contact extends Component {
     super(props)
     this.state = {
       doc: null,
+      name: "",
+      lastname: "",
+      address: "",
+      number: "",
+      message: "",
+      email: "",
+      phone: "",
+      text: "",
     }
   }
 
@@ -28,9 +36,24 @@ class Contact extends Component {
     });
   }
 
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
   render() {
     if (this.state.doc) {
       const contact = this.state.doc.data;
+      const { name, lastname, address, number, message, email, phone, text } = this.state;
       return (
         <div>
           <SubPage
@@ -40,30 +63,30 @@ class Contact extends Component {
             <section className="ContactContainer">
               <h2>Hey look, a form!</h2>
               <p>Any work realated question or business ideas can be communicated with me through this handy form.</p>
-              <form name="contact" method="post" action="/thank-you" data-netlify="true" data-netlify-honeypot="bot-field">
+              <form onSubmit={this.handleSubmit}>
                 <div className="inputFields">
-                  <input type="text" name="name" placeholder="Whats your first name?"/>
-                  <input type="text" name="name" placeholder="Your last name?"/>
+                  <input type="text" name="name" placeholder="Whats your first name?" value={name} onChange={this.handleChange}/>
+                  <input type="text" name="name" placeholder="Your last name?" value={lastname} onChange={this.handleChange}/>
                 </div>
                 <div className="inputFields">
-                  <input type="email" name="email" placeholder="Your email?"/>
-                  <input type="tel" name="phone" placeholder="Lastly your phone number"/>
+                  <input type="email" name="email" placeholder="Your email?" value={address} onChange={this.handleChange}/>
+                  <input type="tel" name="phone" placeholder="Lastly your phone number" value={number} onChange={this.handleChange}/>
                 </div>
                 <div>
-                  <textarea name="message" placeholder="What can I do for you?"></textarea>
+                  <textarea name="message" placeholder="What can I do for you?" value={message} onChange={this.handleChange}></textarea>
                 </div>
                 <div className="inputRadio">
                   <h3>How would you like me to contact you?</h3>
                   <span>
-                    <input type="radio" id="contactChoice1" name="contact" value="email"/>
+                    <input type="radio" id="contactChoice1" name="contact" value="email" onChange={this.handleChange} />
                     <label htmlFor="contactChoice1">Email</label>
                   </span>
                   <span>
-                    <input type="radio" id="contactChoice2" name="contact" value="phone"/>
+                    <input type="radio" id="contactChoice2" name="contact" value="phone" onChange={this.handleChange}/>
                     <label htmlFor="contactChoice2">Phone</label>
                   </span>
                   <span>
-                    <input type="radio" id="contactChoice3" name="contact" value="mail"/>
+                    <input type="radio" id="contactChoice3" name="contact" value="text" onChange={this.handleChange}/>
                     <label htmlFor="contactChoice3">Text</label>
                   </span>
                 </div>
