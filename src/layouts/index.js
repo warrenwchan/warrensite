@@ -32,6 +32,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
+    <input type="hidden" name="contact" value="contact" />
     {children()}
   </div>
 )
