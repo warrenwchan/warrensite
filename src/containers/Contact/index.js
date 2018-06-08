@@ -20,7 +20,7 @@ class Contact extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const apiEndpoint = 'https://warrensite.prismic.io/api/v2';
 
     Prismic.api(apiEndpoint).then(api => {
