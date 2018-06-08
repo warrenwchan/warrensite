@@ -61,8 +61,16 @@ class Contact extends Component {
             <section className="ContactContainer">
               <h2>Hey look, a form!</h2>
               <p>Any work realated question or business ideas can be communicated with me through this handy form.</p>
-              <form onSubmit={this.handleSubmit}>
+              <form
+                name="contact"
+                method="post"
+                action="/thank-you/"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={this.handleSubmit}
+              >
               <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
                 <div className="inputFields">
                   <input type="text" name="name" placeholder="Whats your first name?" value={name} onChange={this.handleChange}/>
                   <input type="text" name="lastname" placeholder="Your last name?" value={lastname} onChange={this.handleChange}/>
