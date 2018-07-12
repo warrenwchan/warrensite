@@ -34,7 +34,7 @@ class Home extends Component {
         <div>
           <div className="jumbotronContainer">
             <div className="overlayText">
-              <h2>WARREN CHAN</h2>
+              <h2>Home of my work.</h2>
             </div>
             <div className="jumbotron">
               <Jumbotron
