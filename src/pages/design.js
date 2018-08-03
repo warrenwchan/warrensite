@@ -24,21 +24,6 @@ export const query = graphql`
             banner_image {
               url
             }
-            body {
-              id
-              primary{
-                slug{
-                  text
-                }
-                category {
-                  html
-                  text
-                }
-                image {
-                  url
-                }
-              }
-            }
           }
         }
       }
