@@ -1,6 +1,7 @@
 @import "../styles/mixins.scss";
 
 .block {
+  @include max-width-center;
   padding: 10% 0;
 }
 
@@ -70,7 +71,7 @@
   font-size: 1rem;
   padding: 0 5%;
   @include Desktop {
-    font-size: 1.2rem;
+    padding: 0;
   }
 }
 

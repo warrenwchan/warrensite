@@ -1,6 +1,7 @@
 @import '../../styles/mixins';
 
 .projectCategoryContainer {
+  @include max-width-center;
   padding: 100px 0;
   a {
     text-decoration: none;

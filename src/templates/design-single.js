@@ -130,9 +130,6 @@ export const query = graphql`
         page_title {
           text
         }
-        template{
-          text
-        }
         slug {
           text
         }

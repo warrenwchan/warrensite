@@ -1,8 +1,7 @@
 @import "../styles/mixins.scss";
 
 .album-grid {
-  max-width: 1280px;
-  margin: 0 auto;
+  @include max-width-center;
   padding: 150px 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
