@@ -1,17 +1,24 @@
-@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
 
 .block {
   padding: 10% 0;
 }
 
 .desc-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include Desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .desc-photo {
-  width: 48%;
+  width: 100%;
+  margin-bottom: 5%;
+  @include Desktop {
+    width: 48%;
+    margin-bottom: 0;
+  }
 }
 
 .desc-photo:after {
@@ -21,16 +28,24 @@
 }
 
 .desc-blurb {
-  width: 48%;
-  display: flex;
-  align-items: center;
+  padding: 0 5%;
+  @include Desktop {
+    width: 48%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
 }
 
 .photo-grid-section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
   grid-auto-rows: 1fr;
-  grid-gap: 10px;
+  grid-gap: 1px;
+  @include Desktop {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-gap: 10px;
+  }
 
   .photo {
     background: rgba(0,0,0,0.1);
@@ -51,7 +66,11 @@
 }
 
 .paragraph-section {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  padding: 0 5%;
+  @include Desktop {
+    font-size: 1.2rem;
+  }
 }
 
 .post-info {
@@ -60,8 +79,11 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   width: 100%;
-  padding: 5% 0 20px 0;
+  padding: 3%;
   border-bottom: 1px solid $primary;
+  @include Desktop {
+    padding: 5% 0 20px 0;
+  }
   p {
     margin: 0;
   }
