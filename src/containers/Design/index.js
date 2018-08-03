@@ -1,67 +1,41 @@
 import React, { Component } from 'react'
 import styles from './styles.scss'
 import { Link } from 'react-router-dom';
-import Prismic from 'prismic-javascript'
 
-import SubPage from '../subpage/'
-import Loader from '../../components/Loader/'
-import PhotoContain from '../../components/PhotoContainer/'
-import PhotoContainer from '../../components/PhotoContainer/';
+import SubPage from '../subpage'
+import PhotoContainer from '../../components/PhotoContainer';
 
 class Design extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      doc: null,
-    }
-  }
-
-  componentWillMount() {
-    const apiEndpoint = 'https://warrensite.prismic.io/api/v2';
-
-    Prismic.api(apiEndpoint).then(api => {
-      api.query(
-        Prismic.Predicates.at('document.type', 'design_page')
-      ).then(response => {
-        if (response) {
-          this.setState({ doc: response.results[0] });
-        }
-      });
-    });
   }
 
   render() {
-    if (this.state.doc) {
-      const design = this.state.doc.data;
-      return(
-        <div>
-          <SubPage
-            title="Graphic Design"
-            photo={design.banner_image.url}
-          >
-            <section className="projectCategoryContainer">
-              {design.body.map((cat, i) => {
-                return (
-                  <Link to="/soon/" key={i}>
-                    <PhotoContainer
-                      class='projectCategory'
-                      photo={cat.primary.image.url}
-                    >
-                      <h2>{cat.primary.category[0].text}</h2>
-                    </PhotoContainer>
-                  </Link>
-                )
-              })}
-            </section>
-          </SubPage>
-        </div>
-      )
-    } else {
-      return (
-        <Loader/>
-      )
-    }
-  }
-}
+    const page = this.props.data.allPrismicDesignPage.edges[0].node.data;
+    const albums = this.props.data.allPrismicDesignAlbum.edges;
+
+    return(
+      <SubPage
+        title={page.title.text}
+        photo={page.banner_image.url}
+      >
+        <section className="projectCategoryContainer">
+          {albums.map((album, i) => (
+            <Link to={album.node.slugs[0]} key={i}>
+              <PhotoContainer
+                class='projectCategory'
+                photo={album.node.data.banner_photo.url}
+                id={i}
+                key={i}
+              >
+                <h2>{album.node.data.page_title.text}</h2>
+              </PhotoContainer>
+            </Link>
+          ))}
+        </section>
+      </SubPage>
+    )
+  };
+};
 
 export default Design;

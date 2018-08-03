@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import styles from './styles.scss'
 import Prismic from 'prismic-javascript'
-import Link from 'gatsby-link'
 
 import Jumbotron from '../../components/Jumbotron'
 import Skillset from '../../components/Skillset'
