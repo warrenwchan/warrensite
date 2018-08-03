@@ -15,6 +15,7 @@
 .desc-photo {
   width: 100%;
   margin-bottom: 5%;
+  border-radius: 2px;
   @include Desktop {
     width: 48%;
     margin-bottom: 0;
@@ -48,7 +49,7 @@
   }
 
   .photo {
-    background: rgba(0,0,0,0.1);
+    border-radius: 2px;
   }
 }
 

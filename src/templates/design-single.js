@@ -12,7 +12,7 @@ const DesignSingle = ({ data }) => {
     <section className="block desc-section">
         <div
           className="desc-photo"
-          style={{ background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0,0.8) 90%) ,url(
+          style={{ background: `url(
             ${props.photo}
           ) center / cover` }}
         ></div>
