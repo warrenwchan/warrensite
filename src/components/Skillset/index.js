@@ -24,14 +24,11 @@ const SkillBox = (props) => {
 class Skillset extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      skill: 'photography',
-    }
   }
 
   render() {
     return (
-      <div className="skillsContainer">
+      <section className="skillsContainer">
         <SkillBox
           title="Web Dev"
           desc="Front-end web developer working with you to build your personalized website."
@@ -50,7 +47,7 @@ class Skillset extends Component {
           to="/photography/"
           photo={devImage}
         />
-      </div>
+      </section>
     );
   }
 }

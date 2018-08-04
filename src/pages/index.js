@@ -1,11 +1,32 @@
 import React from 'react'
-
 import Home from '../containers/home'
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <div>
-    <Home/>
+    <Home data={data}/>
   </div>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query Home {
+    allPrismicHomePage {
+      edges {
+        node {
+          slugs
+          data {
+            title {
+              text
+            }
+            jumbotron_image {
+              image {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`

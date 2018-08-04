@@ -83,6 +83,8 @@
   width: 100%;
   padding: 3%;
   border-bottom: 1px solid $primary;
+  max-width: 1280px;
+  margin: 0 auto;
   @include Desktop {
     padding: 5% 0 20px 0;
   }

@@ -35,8 +35,8 @@ class PhotoSlider extends Component {
                     photo={photo.image.url}
                   >
                     <div className="sliderImgInfo">
-                      <h2>{photo.image_title[0].text}</h2>
-                      <p>{photo.image_description[0].text}</p>
+                      <h2>{photo.image_title.text}</h2>
+                      <p>{photo.image_description.text}</p>
                     </div>
                   </PhotoContainer>
                 </div>
