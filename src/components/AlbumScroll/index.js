@@ -3,7 +3,7 @@ import './styles.scss';
 import Gallery from 'react-photo-gallery';
 import Lightbox from 'react-images';
 
-class PhotoGrid extends Component {
+class AlbumScroll extends Component {
   constructor(props) {
     super(props);
     this.state = { currentImage: 0 };
@@ -42,13 +42,13 @@ class PhotoGrid extends Component {
   render() {
     let photoArr = []
     this.props.photos.map((photo, i) => {
-      photoArr.push({src: photo.photo.url, width: 1, height: 1,})
+      photoArr.push({src: photo.photo.url, alt: photo.description.text, width: 2, height: 1,})
       return photoArr
     })
 
     return (
-      <section className="block">
-        <Gallery photos={photoArr} onClick={this.openLightbox} />
+      <section className="album-scroll-container" style={{width: `100%`}}>
+        <Gallery photos={photoArr} onClick={this.openLightbox} direction="column" columns="1"/>
         <Lightbox
           images={photoArr}
           onClose={this.closeLightbox}
@@ -62,4 +62,4 @@ class PhotoGrid extends Component {
   }
 }
 
-export default PhotoGrid;
+export default AlbumScroll;

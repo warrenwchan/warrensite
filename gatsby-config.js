@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
   },
-  pathPrefix: `/design`,
+  pathPrefix: `/`,
   plugins: [
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-sass`,
@@ -37,6 +37,7 @@ module.exports = {
         repositoryName: "WarrenSite",
         linkResolver: ({ node, key, value }) => doc => {
           if (doc.type === 'Design_Page') return "/design/" + doc.uid;
+          if (doc.type === 'Photography_Page') return "/photography" + doc.uid;
           // Fallback for other types, in case new custom types get created
           return "/doc/" + doc.id;
         },

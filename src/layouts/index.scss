@@ -631,7 +631,7 @@ pre tt:after {
 
 .templateWrapper {
   overflow: hidden;
-  border-top: 4px solid $primary;
+  border-top: 0.5vh solid $primary;
   @include Desktop {
     overflow: initial;
   }

@@ -35,6 +35,14 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
           }
         }
       }
+      allPrismicPhotographyAlbum {
+        edges {
+          node {
+            first_publication_date
+            slugs
+          }
+        }
+      }
     }
   `)
 
@@ -63,6 +71,17 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
             album: single.node.data.album
           }
         })
+      }
+    })
+  })
+
+  pages.data.allPrismicPhotographyAlbum.edges.forEach(album => {
+    console.log(`created album for ${album.node.slugs[0]}`)
+    createPage({
+      path: `/photography/${album.node.slugs[0]}`,
+      component: path.resolve('./src/templates/photography-album.js'),
+      context: {
+        slug: album.node.slugs[0],
       }
     })
   })
