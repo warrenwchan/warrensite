@@ -3,6 +3,7 @@ import '../styles/design-single.scss'
 import SubPage from '../containers/subpage'
 import Loader from '../components/Loader'
 import { Link } from 'react-router-dom';
+import PhotoGrid from '../components/PhotoGrid'
 
 const DesignSingle = ({ data }) => {
   const single = data.prismicDesignSingle
@@ -20,21 +21,6 @@ const DesignSingle = ({ data }) => {
           <p>{props.description}</p>
         </div>
       </section>
-  )
-
-  const PhotoGrid = (props) => (
-    <section className="block photo-grid-section">
-      {props.photos.map((photo, i) => {
-        return (
-          <div
-            className="photo"
-            style={{ background: `url( ${photo.photo.url} ) center / cover` }}
-            key={i}
-          >
-          </div>
-        )
-      })}
-    </section>
   )
 
   const Paragraph = (props) => (
