@@ -27,7 +27,6 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
         edges{
           node {
             first_publication_date (formatString: "MMMM DD, YYYY")
-            uid
             slugs
             data {
               album
@@ -46,8 +45,10 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
     }
   `)
 
+  console.log(pages)
+
   pages.data.allPrismicDesignAlbum.edges.forEach(album => {
-    console.log(`create page for ${album.node.uid} worked!`)
+    console.log(`create page for ${album.node.slugs[0]} worked!`)
     createPage({
       path: `/design/${album.node.slugs[0]}`,
       component: path.resolve('./src/templates/design-album.js'),
@@ -61,12 +62,11 @@ exports.createPages = async ({ graphql, boundActionCreators }) => {
   pages.data.allPrismicDesignAlbum.edges.forEach(album => {
     pages.data.allPrismicDesignSingle.edges.forEach(single => {
       if(album.node.slugs[0] === single.node.data.album) {
-        console.log(`created page for ${single.node.uid}`)
+        console.log(`created page for ${single.node.slugs[0]}`)
         createPage({
           path: `/design/${album.node.slugs[0]}/${single.node.slugs}`,
           component: path.resolve('./src/templates/design-single.js'),
           context: {
-            uid: single.node.uid,
             slug: single.node.slugs[0],
             album: single.node.data.album
           }

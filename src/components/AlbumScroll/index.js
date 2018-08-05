@@ -47,7 +47,7 @@ class AlbumScroll extends Component {
     })
 
     return (
-      <section className="album-scroll-container" style={{width: `100%`}}>
+      <section className="album-scroll-container" style={{width: `100%`, minHeight: `100%`}}>
         <Gallery photos={photoArr} onClick={this.openLightbox} direction="column" columns="1"/>
         <Lightbox
           images={photoArr}
