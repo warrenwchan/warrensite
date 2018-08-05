@@ -68,7 +68,6 @@ export default DesignSingle
 export const query = graphql`
   query DesignSingleQuery($slug: String!, $album: String) {
     prismicDesignSingle(slugs: { eq: $slug }) {
-      uid
       slugs
       first_publication_date (formatString: "MMMM DD, YYYY")
       data {
