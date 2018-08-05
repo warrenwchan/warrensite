@@ -13,6 +13,9 @@
   position: absolute;
   top: 50%;
   right: 5%;
+  @include Desktop {
+    right: 15%;
+  }
   h2 {
     font-size: 1.8rem;
     color: white;

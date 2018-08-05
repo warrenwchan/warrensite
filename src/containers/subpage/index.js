@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styles from './styles.scss'
-import Link from 'gatsby-link'
 import PhotoContainer from '../../components/PhotoContainer'
 
 class SubPage extends Component {

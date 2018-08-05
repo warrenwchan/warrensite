@@ -1,0 +1,12 @@
+@import './../../styles/mixins.scss';
+
+.album-scroll-container {
+  background: $deepGrey;
+  img {
+    transition: all 0.8s ease;
+    opacity: 0.4;
+  }
+  img:hover {
+    opacity: 1;
+  }
+}
