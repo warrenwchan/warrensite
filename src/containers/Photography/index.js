@@ -24,7 +24,7 @@ class Photography extends Component {
               <Link to={album.node.slugs[0]} key={i}>
                 <PhotoContainer class="photoCell" photo={album.node.data.body[0].items[0].photo.url}>
                   <div className="cellInfo">
-                    <h4>{album.node.data.album_title.text}</h4>
+                    <h3>{album.node.data.album_title.text}</h3>
                     <p>{album.node.first_publication_date}</p>
                   </div>
                 </PhotoContainer>

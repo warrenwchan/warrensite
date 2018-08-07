@@ -30,8 +30,8 @@ const DesignAlbums = ({ data }) => {
                     ) center / cover` }}
                   >
                     <div className="grid-content">
-                      <h3>{gridItem.node.data.work_name.text}</h3>
-                      <p>{gridItem.node.first_publication_date}</p>
+                      <h2 className="album-name">{gridItem.node.data.work_name.text}</h2>
+                      <p className="album-data">{gridItem.node.first_publication_date}</p>
                     </div>
                   </div>
                 </Link>
