@@ -1,6 +1,6 @@
 @import '../../styles/mixins';
 
-.projectCard {
+.project-card {
   display: flex;
   flex-direction: column-reverse;
   padding: 50px 0;
@@ -28,10 +28,9 @@
     padding-bottom: 100%;
   }
 
-  .projectDesc {
+  .project-desc {
     width: 100%;
     padding: 25px 0;
-    @include round-button;
     @include Desktop {
       width: 90%;
       margin: 0 50px;
@@ -52,25 +51,41 @@
       color: $lightGrey;
     }
     a {
-      width: 100%;
+      color: $deepGrey;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      .project-link-arrow {
+        opacity: 1;
+        animation-name: fadeInOpacity;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+      }
+    }
+    .project-link-arrow {
+      margin: 0 5px;
+      opacity: 0;
+      transform: translate(0px);
     }
   }
 
-  .projectCardImage {
+  .project-card-image {
     width: 100%;
     height: 100%;
     background-color: grey;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
     @include Desktop {
-      width: 500px;
+      width: 400px;
     }
   }
-  .projectCardImage:after {
+  .project-card-image:after {
     content: "";
     display: block;
     padding-bottom: 100%;
   }
 }
-.projectCard:last-child {
+.project-card:last-child {
   border: none;
 }
