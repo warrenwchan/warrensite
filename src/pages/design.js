@@ -81,6 +81,14 @@ export const query = graphql`
                   }
                 }
               }
+              __typename
+              ... on PrismicDesignSingleBodySeamlessPhoto {
+                items {
+                  photo {
+                    url
+                  }
+                }
+              }
             }
           }
         }

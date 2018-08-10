@@ -8,6 +8,7 @@ import PhotoGrid from '../components/PhotoGrid'
 const DesignSingle = ({ data }) => {
   const single = data.prismicDesignSingle
   const album = data.prismicDesignAlbum
+  console.log(single)
 
   const Description = (props) => (
     <section className="block desc-section">
@@ -31,6 +32,19 @@ const DesignSingle = ({ data }) => {
     </section>
   )
 
+  const PhotoStream = (props) => {
+    console.log(props)
+    return (
+      <section className="block photostream-section">
+        {props.photos.map((photo, i) => {
+          return (
+            <img src={photo.photo.url}/>
+          )
+        })}
+      </section>
+    )
+  }
+
   return (
     <div>
       <SubPage
@@ -49,6 +63,8 @@ const DesignSingle = ({ data }) => {
               return <PhotoGrid key={i} photos={section.items} />
             case "PrismicDesignSingleBodyParagraph":
               return <Paragraph key={i} paragraph={section.primary.paragraph.text} />
+            case "PrismicDesignSingleBodySeamlessPhoto":
+              return <PhotoStream key={i} photos={section.items} />
             default:
               <Loader />
               break;
@@ -100,6 +116,14 @@ export const query = graphql`
             primary {
               paragraph {
                 text
+              }
+            }
+          }
+          __typename
+          ... on PrismicDesignSingleBodySeamlessPhoto {
+            items {
+              photo {
+                url
               }
             }
           }
