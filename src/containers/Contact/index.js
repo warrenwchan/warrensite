@@ -42,7 +42,7 @@ class Contact extends Component {
           photo={contactData.banner.url}
         >
           <section className="ContactContainer">
-             <h2>Hey look, a form!</h2>
+             <h2>Let's get in touch</h2>
              <p>Any work realated question or business ideas can be communicated with me through this handy form.</p>
              <form
               name="contact"
@@ -83,7 +83,7 @@ class Contact extends Component {
             </form>
           </section>
           <section className="contactLinkContainer">
-            <h2>Other ways to reach me</h2>
+            <h2>Also find me at</h2>
             <div className="contactLinks">
               {contactData.body.map(( social, i ) => {
                 return(

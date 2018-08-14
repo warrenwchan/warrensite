@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import styles from './styles.scss'
 import Link from 'gatsby-link'
-import MenuItems from '../MenuItems/'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 import logo from '../../assets/white-Logo.svg'
@@ -22,6 +21,22 @@ class Header extends Component {
   }
 
   render() {
+
+    const MenuItems = ( props ) => (
+      <div className={(props.toggle === true ? 'menuItems' : 'menuItems menuItemsHide')}>
+        <Link to="/" onClick={props.onClickToggle}>Home</Link>
+        <div className="dropdown">
+          <a className="dropbtn">Work <FontAwesomeIcon icon="caret-down" size="1x"/></a>
+          <div className="dropdown-content">
+            <Link to="/photography/" onClick={props.onClickToggle}><FontAwesomeIcon icon="caret-right"/> Photography</Link>
+            <Link to="/design/" onClick={props.onClickToggle}><FontAwesomeIcon icon="caret-right"/> Design</Link>
+            <Link to="/dev/" onClick={props.onClickToggle}><FontAwesomeIcon icon="caret-right"/> Developer</Link>
+          </div>
+        </div>
+        <Link to="/contact/" onClick={props.onClickToggle}>Contact</Link>
+      </div>
+    )
+
     return (
       <div className="navbar">
         <div className="navBarContainer">

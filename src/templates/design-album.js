@@ -1,7 +1,9 @@
-import React from 'react'
-import '../styles/design-album.scss'
+import React from 'react';
+import '../styles/design-album.scss';
 import { Link } from 'react-router-dom';
-import SubPage from '../containers/subpage'
+import SubPage from '../containers/subpage';
+import PhotoContainer from '../components/PhotoContainer';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 const DesignAlbums = ({ data }) => {
   const albums = data.prismicDesignAlbum;
@@ -21,19 +23,17 @@ const DesignAlbums = ({ data }) => {
             {filteredSingles.map((gridItem, i) => {
               return (
                 <Link to={`${albums.slugs[0]}/${gridItem.node.slugs[0]}`} key={i}>
-                  <div
-                    className="grid-item"
-                    style={{ background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0,0.8) 90%) ,url(
-                      ${gridItem.node.data.body[0].__typename === "PrismicDesignSingleBodyPhotoGrid" ?
-                      gridItem.node.data.body[0].items[0].photo.url :
-                      gridItem.node.data.body[0].primary.photo.url }
-                    ) center / cover` }}
+                  <PhotoContainer
+                    class="grid-item"
+                    photo={`${gridItem.node.data.body[0].__typename === "PrismicDesignSingleBodyPhotoGrid" ?
+                    gridItem.node.data.body[0].items[0].photo.url :
+                    gridItem.node.data.body[0].primary.photo.url }`}
                   >
                     <div className="grid-content">
                       <h2 className="album-name">{gridItem.node.data.work_name.text}</h2>
                       <p className="album-data">{gridItem.node.first_publication_date}</p>
                     </div>
-                  </div>
+                  </PhotoContainer>
                 </Link>
               )
             })}
@@ -45,7 +45,7 @@ const DesignAlbums = ({ data }) => {
           </div>
         }
         <div className="post-info">
-          <Link to="/design/">Back to Design page</Link>
+          <Link to="/design/"><FontAwesomeIcon className="pagination-icon" icon="angle-left" size="1x"/> Back to Design page</Link>
         </div>
       </section>
     </SubPage>
