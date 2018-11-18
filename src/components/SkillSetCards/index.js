@@ -2,24 +2,28 @@ import React, { Component } from 'react'
 import styles from './styles.scss'
 import Link from 'gatsby-link'
 
+import devImg from "../../assets/photos/fabian-grohs-524350-unsplash.jpg";
+import designImg from "../../assets/photos/brad-neathery-248309-unsplash.jpg";
+import photoImg from "../../assets/photos/jay-wennington-624-unsplash.jpg";
+
 const skills = [
   {
     title: "Web Development",
     desc: "Front-end web developer working with you to build your personalized website.",
     path: "/dev/",
-    photo: "http://0.0.0.0:8000/static/fabian-grohs-524350-unsplash.95b34f6f.jpg"
+    photo: devImg
   },
   {
     title: "Graphic Design",
     desc: "Currently practicing front-end web design around landing pages and single page applications.",
     path: "/design/",
-    photo: "http://0.0.0.0:8000/static/brad-neathery-248309-unsplash.195c41c8.jpg"
+    photo: designImg
   },
   {
     title: "Photography",
     desc: "Lets take some portraits, lanscape headshots or product shots. You name it.",
     path: "/photography/",
-    photo: "/static/jay-wennington-624-unsplash.e8d93958.jpg"
+    photo: photoImg
   },
 ]
 
