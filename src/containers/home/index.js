@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Jumbotron from '../../components/Jumbotron'
-import Skillset from '../../components/Skillset'
+import SkillSetCards from '../../components/SkillSetCards'
 import ContactSection from '../../components/ContactSection'
 
 class Home extends Component {
@@ -14,7 +14,7 @@ class Home extends Component {
     return (
       <section>
         <Jumbotron data={home}/>
-        <Skillset/>
+        <SkillSetCards/>
         <ContactSection/>
       </section>
     )
