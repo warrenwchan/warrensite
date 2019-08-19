@@ -29,8 +29,8 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Warren's Portfolio"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: "Warren's portfolio was designed and built himself to showcase his work and experimental projects." },
+        { name: 'keywords', content: 'vancouver, graphic, design, freelance, website, developer, code' },
       ]}
     />
     <Header />
